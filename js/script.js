@@ -5,11 +5,6 @@ let duracao = document.getElementById('progress')
 let tempoDuracaoFinal = parseInt(music.duration)
 let duracaoAtual = parseInt(music.currentTime)
 
-function progresso() {
-    duracaoAtual ++
-}
-
-
 
 function iniciar() {
     music.play()
