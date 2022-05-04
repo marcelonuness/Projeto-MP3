@@ -26,6 +26,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
     }
     musica.play()
     iniciar()
+
 })
 document.querySelector('.posterior').addEventListener('click', () => {
     indexMusica++
@@ -37,6 +38,8 @@ document.querySelector('.posterior').addEventListener('click', () => {
     iniciar()
 
 })
+
+document.querySelector('.ponto').addEventListener('click', )
 
 // funcoes
 function iniciar() {
@@ -80,5 +83,12 @@ function mudarDeMusica(index) {
         imagem.src = musicas[index].img
         quantoDura.textContent = minutos(Math.floor(musica.duration))
     })
+}
+
+//mudar de faixa automaticamente
+function mudarDeFaixa() {
+    if(atualizando = quantoDura) {
+        indexMusica ++
+    }
 }
 

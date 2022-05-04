@@ -75,6 +75,7 @@ progress {
     background-color: black;
     border-radius: 50%;
     margin-left: -2px;
+    cursor: pointer;
 }
 
 .tempo {
