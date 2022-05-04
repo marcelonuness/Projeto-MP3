@@ -8,23 +8,37 @@
         <link rel="stylesheet" href="./css/style.css">     
         <title>our playlist</title>
     </head>
-    <body id="color">
-        <div id="container">
-            <audio id="music" src="./musicas/ed_sheeran_best_part_of_me_feat_yebba_official_lyric_video_3131468281568568928.mp3"></audio>
+    <body>
+        <div id="container">            
             <div class="card">
-                <div class="picture">
-                    <img src="https://i.scdn.co/image/ab67616d00001e02b10514798bce97e3dff3607e">
-                </div>
-                <div class="barra">
-                    <input type="range" id="progress" min="0" max="60" step="1" value="progresso()">
-                </div>
-                <div class="controles">
-                    <i class="fa-solid fa-backward fa-3x" onclick="retroceder()"></i>
-                    <i class="fa-solid fa-pause fa-3x" onclick="pausar()"></i>
-                    <i class="fa-solid fa-play fa-3x" onclick="iniciar()"></i>
-                    <i class="fa-solid fa-forward fa-3x" onclick="avancar()"></i>
+                <div class="content">
+                    <div class="picture">
+                        <img src="./imagens\best-part-img.jpg">
+                    </div>
+                    <div class="informacoes">
+                        <h3>Nome da Música</h3>
+                        <p>Nome do Artista</p>
+                    </div>
+                    <div class="duracao">
+                        <div class="barra">
+                            <progress value="0" max="1"></progress>
+                            <div class="ponto"></div>
+                        </div>
+                        <div class="tempo">
+                            <p class="inicio">0:00</p>
+                            <p class="fim">4:30</p>
+                        </div>                    
+                    </div>    
+                    
+                    <div class="controles">
+                        <i class="fa-solid fa-backward setas anterior" onclick="retroceder()"></i>
+                        <i class="fa-solid fa-circle-pause botao-pause" onclick="pausar()"></i>
+                        <i class="fa-solid fa-circle-play botao-play" onclick="iniciar()"></i>
+                        <i class="fa-solid fa-forward setas posterior" onclick="avancar()"></i>
+                    </div>
                 </div>            
             </div>
+            <audio id="music" src="./musicas/ed_sheeran_best_part_of_me_feat_yebba_official_lyric_video_3131468281568568928.mp3"></audio>
         </div>
         <script src="./js/script.js"></script>
     </body>

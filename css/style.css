@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Outfit:wght@100;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(46, 46, 46);
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
 }
 
 /* layout */
@@ -20,45 +24,89 @@ body {
 
 .card {
     height: 450px;
-    width: 350px;    
-    background-color: white;
+    width: 300px;    
+    background-color: rgba(255, 255, 255, 0.842);
     border-radius: 25px;   
+}
+
+.content {
+    margin: 20px;
+}
+
+/* imagens */
+.picture {
+    text-align: center;
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 40px;
+    width: 225px;
+}
+
+
+/*  barra  */
+
+.duracao {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.barra {
+    height: 5px;
+    border: 1px solid rgb(66, 28, 28);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px;
+}
+
+progress {
+    height: 5px;
+    width: 0%;
+    background-color: rgb(148, 68, 68);
+}
+
+.ponto {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: -2px;
+}
+
+.tempo {
+    display: flex;
+    justify-content: space-between;
 }
 
 /*controles*/
 
 .controles {
-    width: 358px;
-    position: absolute;
-    bottom: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-i {
-    margin: 0 21px;
+.botao-play, .botao-pause {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.botao-pause {
+    display: none;
+}
+
+.setas {
+    font-size: 40px;
+    cursor: pointer;
 }
 
 i:hover {
     color: rgb(177, 177, 177);
 }
 
-/*  barra  */
 
-.barra {
-    width: 348px;
-    position: absolute;
-    bottom: 31%;
-}
-
-input {
-    width: 320px;
-    margin: 10px 16px;
-}
-
-.picture {
-    text-align: center;
-    padding: 15px;
-}
-
-img {
-    border-radius: 50px;
-}
