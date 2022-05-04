@@ -10,7 +10,7 @@ let quantoDura = document.querySelector('.fim')
 let imagem = document.querySelector('img')
 let nomeMusica = document.querySelector('.informacoes h3')
 let nomeArtista = document.querySelector('.informacoes p')
-let indexMusica = 0
+let indexMusica = 2
 
 mudarDeMusica(indexMusica)
 
@@ -39,7 +39,6 @@ document.querySelector('.posterior').addEventListener('click', () => {
 
 })
 
-document.querySelector('.ponto').addEventListener('click', )
 
 // funcoes
 function iniciar() {
