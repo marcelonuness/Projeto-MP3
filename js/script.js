@@ -10,7 +10,7 @@ let quantoDura = document.querySelector('.fim')
 let imagem = document.querySelector('img')
 let nomeMusica = document.querySelector('.informacoes h3')
 let nomeArtista = document.querySelector('.informacoes p')
-let indexMusica = 2
+let indexMusica = 0
 
 mudarDeMusica(indexMusica)
 
@@ -18,29 +18,37 @@ quantoDura.textContent = minutos(Math.floor(musica.duration))
 
 // eventos
 musica.addEventListener('timeupdate', atualizando)
+
 document.querySelector('.anterior').addEventListener('click', () => {
-    indexMusica--
-    mudarDeMusica(indexMusica)
-    if (indexMusica < 0) {
+    indexMusica--    
+    if(indexMusica < 0) {
         indexMusica = 2
     }
-    musica.play()
-    iniciar()
-
-})
-document.querySelector('.posterior').addEventListener('click', () => {
-    indexMusica++
     mudarDeMusica(indexMusica)
-    if (indexMusica > 2) {
+    iniciar()
+})
+
+document.querySelector('.posterior').addEventListener('click', () => {
+    indexMusica++   
+    if(indexMusica > 2) {
         indexMusica = 0
     }
-    musica.play()
+    mudarDeMusica(indexMusica)
     iniciar()
-
 })
 
 
 // funcoes
+function mudarDeMusica(index) {
+    musica.setAttribute('src', musicas[index].src)
+    musica.addEventListener('loadeddata', () => {
+        nomeMusica.textContent = musicas[index].titulo
+        nomeArtista.textContent = musicas[index].artista
+        imagem.src = musicas[index].img
+        quantoDura.textContent = minutos(Math.floor(musica.duration))        
+    })
+}
+
 function iniciar() {
        
     musica.play()
@@ -74,20 +82,5 @@ function minutos(segundos) {
     return segundosParaMinutos + ':' + minutosParaSegundos
 }
 
-function mudarDeMusica(index) {
-    musica.setAttribute('src', musicas[index].src)
-    musica.addEventListener('loadeddata', () => {
-        nomeMusica.textContent = musicas[index].titulo
-        nomeArtista.textContent = musicas[index].artista
-        imagem.src = musicas[index].img
-        quantoDura.textContent = minutos(Math.floor(musica.duration))
-    })
-}
 
-//mudar de faixa automaticamente
-function mudarDeFaixa() {
-    if(atualizando = quantoDura) {
-        indexMusica ++
-    }
-}
 
