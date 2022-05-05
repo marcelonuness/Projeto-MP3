@@ -17,7 +17,24 @@ mudarDeMusica(indexMusica)
 quantoDura.textContent = minutos(Math.floor(musica.duration))
 
 // eventos
-musica.addEventListener('timeupdate', atualizando)
+musica.ontimeupdate = function() {
+    let barra = document.querySelector('progress')
+    
+}
+
+
+musica.addEventListener('ended', () => {
+    if (true) {
+        indexMusica++
+    } if (indexMusica < 0) {
+        indexMusica = 2
+    } if(indexMusica > 2) {
+        indexMusica = 0
+    }
+    mudarDeMusica(indexMusica)
+    iniciar()
+})
+
 
 document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--    
@@ -81,6 +98,3 @@ function minutos(segundos) {
 
     return segundosParaMinutos + ':' + minutosParaSegundos
 }
-
-
-
