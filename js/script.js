@@ -16,13 +16,7 @@ mudarDeMusica(indexMusica)
 
 quantoDura.textContent = minutos(Math.floor(musica.duration))
 
-// eventos
-musica.ontimeupdate = function() {
-    let barra = document.querySelector('progress')
-    
-}
-
-
+//eventos
 musica.addEventListener('ended', () => {
     if (true) {
         indexMusica++
