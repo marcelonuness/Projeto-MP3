@@ -26,7 +26,6 @@ musica.addEventListener('ended', () => {
         indexMusica = 0
     }
     mudarDeMusica(indexMusica)
-    iniciar()
 })
 
 
