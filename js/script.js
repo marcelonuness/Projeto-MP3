@@ -78,7 +78,7 @@ function pausar() {
 function atualizando() {
     let barra = document.querySelector('progress')
     barra.style.width = Math.floor((musica.currentTime / musica.duration) * 100) + '%'
-    let tempo = document.querySelector('.inicio')
+    let tempo = document.querySelector('inicio')
     tempo.textContent = minutos(Math.floor(musica.currentTime))
 }
 
